@@ -30,7 +30,6 @@ for link in links:
 	url = link['href']
 	#  grab the data out of the onclick instrution from javascript
 	#  clean up the onclick data
-	url = js.replace("_gaq.push(['_trackEvent', 'Downloads', 'excel', '",'').replace("'])",'')
 	title = link.contents[0]
 	# create the right strings for the new filename
 	csvYr = title.split(' ')[-1]
