@@ -107,6 +107,8 @@ for link in links:
     if '201' in csvMth:
         csvYr = title.split(' ')[-2].strip()
         csvMth = title.split(' ')[-3][:3]
+    if '20' not in csvYr:
+        csvYr = '20'+csvYr
     csvMth = convert_mth_strings(csvMth.upper())
     data.append([csvYr, csvMth, url])
 
@@ -131,5 +133,3 @@ if errors > 0:
 
 
 #### EOF
-
-
